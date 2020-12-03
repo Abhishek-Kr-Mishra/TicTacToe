@@ -2,12 +2,15 @@ package com.Workshop.TicTacToe;
 
 public class MainClass {
 
-	static char userSymbol, computerSymbol;
+	
 	public static void main(String[] args) {
 
 		System.out.println("Welcome To Tic Toc Toe Game");
 		TicTacToeGame ticTacGame=new TicTacToeGame();
-		ticTacGame.printBoard();
+		char userSymbol, computerSymbol;
+		char[] board;
+		board=ticTacGame.printBoard();
+		
 		userSymbol=ticTacGame.chooseYourCharacter();
 		if(userSymbol=='X') {
 			computerSymbol='O';
@@ -15,6 +18,8 @@ public class MainClass {
 		else if(userSymbol=='O') {
 			computerSymbol='X';
 		}
+		
+		ticTacGame.showBoard(board);
 	}
 
 }
