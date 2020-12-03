@@ -1,5 +1,9 @@
 package com.Workshop.TicTacToe;
 
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
 public class MainClass {
 
 	
@@ -7,8 +11,14 @@ public class MainClass {
 
 		System.out.println("Welcome To Tic Toc Toe Game");
 		TicTacToeGame ticTacGame=new TicTacToeGame();
-		char userSymbol, computerSymbol;
+		Scanner scanner = new Scanner(System.in);
+		Random random = new Random();
+		ArrayList<Integer> playerList = new ArrayList<>();
+		ArrayList<Integer> computerList = new ArrayList<>();
+		char userSymbol;
+		char computerSymbol=' ';
 		char[] board;
+		
 		board=ticTacGame.printBoard();
 		
 		userSymbol=ticTacGame.chooseYourCharacter();
@@ -18,8 +28,10 @@ public class MainClass {
 		else if(userSymbol=='O') {
 			computerSymbol='X';
 		}
-		
+
 		ticTacGame.showBoard(board);
+		
+		int userMove=ticTacGame.getUserMove(board);
 	}
 
 }

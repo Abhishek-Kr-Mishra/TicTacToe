@@ -1,5 +1,6 @@
 package com.Workshop.TicTacToe;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TicTacToeGame {
@@ -31,5 +32,22 @@ public class TicTacToeGame {
 			i=i+3;
 		}	
 	}
+	
+	//CheckFreeSpace_UC4
+	public int getUserMove(char[] gameBoard) {
+		
+		while(true) {
+			System.out.println("Enter your next Move ");
+			int position=sc.nextInt();
+			if(position>0 && position<=9 && isFreeSpace(gameBoard, position))
+				return position;
+		}
+	}
+
+	private static boolean isFreeSpace(char[] gameBoard, int position) {
+		return gameBoard[position] == ' ';
+	}
+	
+	
 }
 
