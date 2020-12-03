@@ -32,6 +32,10 @@ public class MainClass {
 		ticTacGame.showBoard(board);
 		
 		int userMove=ticTacGame.getUserMove(board);
+		
+		ticTacGame.moveToDesiredLocation(board, userMove, userSymbol);
+		
+		ticTacGame.showBoard(board);
 	}
 
 }

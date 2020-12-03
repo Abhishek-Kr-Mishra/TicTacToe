@@ -44,10 +44,13 @@ public class TicTacToeGame {
 		}
 	}
 
-	private static boolean isFreeSpace(char[] gameBoard, int position) {
+	public static boolean isFreeSpace(char[] gameBoard, int position) {
 		return gameBoard[position] == ' ';
 	}
 	
-	
-}
+	//MovingToFreeIndex_UC5
+	public void moveToDesiredLocation(char[] gameBoard, int pos, char symbol) {
+			gameBoard[pos]=symbol;
+		}
+	}
 
